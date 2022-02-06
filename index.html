@@ -103,19 +103,32 @@ Podaj b
 </center>
 <br>
 <h2>Skrypt JS</h2>
-<pre style="margin: 0; line-height: 125%">&lt;script&gt;
-	<span style="color: #000080; font-weight: bold">function</span> f1()
-	{
-		<span style="color: #000080; font-weight: bold">var</span> a = document.getElementById(<span style="color: #0000FF">&quot;a&quot;</span>).value;
-		<span style="color: #000080; font-weight: bold">var</span> b = document.getElementById(<span style="color: #0000FF">&quot;b&quot;</span>).value;
-		<span style="color: #000080; font-weight: bold">var</span> i;
-		<span style="color: #000080; font-weight: bold">var</span> s = <span style="color: #0000FF">&quot;&quot;</span>;
-		
-		<span style="color: #000080; font-weight: bold">for</span>(i=a; i&lt;=b; i++) s = s + i + <span style="color: #0000FF">&quot; &quot;</span>;
-		
-		document.getElementById(<span style="color: #0000FF">&quot;wynik&quot;</span>).innerHTML = s;
-		
-	}
+<pre style="width:100%;padding:0px" id="codeblock"><code style="width:100%">&lt;script&gt;
+
+a=33;
+b=15;
+var reszta;
+
+while (b) &lcub;
+  reszta = a % b;
+  a = b;
+  b = reszta;
+&rcub;
+
+alert(a);
+
+
+function nwd(a, b) &lcub;
+    var reszta;
+    while (b) &lcub;
+        reszta = a % b;
+        a = b;
+        b = reszta;
+    &rcub;
+    return a;
+&rcub;
+
+&lt;/script&gt;</code></pre>
 
 &lt;<span style="color: #a61717; background-color: #e3d2d2">/script&gt;</span>
 </pre>
