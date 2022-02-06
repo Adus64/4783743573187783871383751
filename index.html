@@ -21,19 +21,18 @@ body{
 	
 <script>
 
-function NWD(a,b){
+	function nwd(a, b) {
 var a = document.getElementById("a").value;
 var b = document.getElementById("b").value;
-  var q;
-  while (b != 0){
-    q = a;
-    a = b;
-    b = q mod b;
- }
- return a;
-}
-
-		
+    var tmp;
+    while (b) {
+        tmp = a % b;
+        a = b;
+        b = tmp;
+    }
+    return a;
+document.getElementById("wynik").innerHTML = a;
+}	
 	
 
 </script>
@@ -78,7 +77,6 @@ int main()
 </pre>
 <center>
 <h2>Skrypt JS</h2>
-<p>Skrypt JS drukuje liczby z przedziału a, b</p><br>
 Podaj a 
 <input type = "number" id = "a" value = 1>
 Podaj b
@@ -89,24 +87,16 @@ Podaj b
 </center>
 <br>
 <h2>Skrypt JS</h2>
-<pre style="width:100%;padding:0px" id="codeblock"><code style="width:100%">&lt;script&gt;
 
-
-
- nwd(a, b) &lcub;
-    var reszta;
+<pre style="width:100%;padding:0px" id="codeblock"><code style="width:100%">function nwd(a, b) &lcub;
+    var tmp;
     while (b) &lcub;
-        reszta = a % b;
+        tmp = a % b;
         a = b;
-        b = reszta;
+        b = tmp;
     &rcub;
     return a;
-&rcub;
-
-&lt;/script&gt;</code></pre>
-
-&lt;<span style="color: #a61717; background-color: #e3d2d2">/script&gt;</span>
-</pre>
+&rcub;</code></pre>
 
 <br>
 <br>
