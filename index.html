@@ -48,14 +48,31 @@ body{
 </center>
 
 <h2>Kod cpp</h2>
-
-<pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &lt;iostream&gt;</span>
-<span style="color: #008800; font-weight: bold">using</span> <span style="color: #008800; font-weight: bold">namespace</span> std;
-<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
 {
-    <span style="color: #333399; font-weight: bold">int</span> a, b;
-    cin <span style="color: #333333">&gt;&gt;</span> a <span style="color: #333333">&gt;&gt;</span> b;
-    <span style="color: #008800; font-weight: bold">for</span>(<span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span>a; i<span style="color: #333333">&lt;=</span>b; i<span style="color: #333333">++</span>) cout <span style="color: #333333">&lt;&lt;</span> i <span style="color: #333333">&lt;&lt;</span> <span style="background-color: #fff0f0">&quot; &quot;</span>;
+    <span style="color: black; font-weight: bold">
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int NWD(int a, int b)
+{
+    while(a!=b)
+       if(a>b)
+           a-=b;
+       else
+           b-=a;
+    return a;
+}
+int main()
+{
+    int a, b;
+ 
+    cout<<"Podaj dwie liczby: ";
+    cin>>a>>b;
+ 
+    cout<<"NWD("<<a<<","<<b<<") = "<<NWD(a,b)<<endl;
+ 
+    return 0;
+}</span> a, b;
 }
 </pre>
 <center>
